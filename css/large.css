@@ -1,0 +1,19 @@
+.pg-first-fold-proyect-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+.pg-first-fold-slider {
+  display: flex;
+  width: 75%;
+}
+.pg-first-fold-slider div {
+  flex-direction: row;
+}
+.pg-describe-proyect-specs {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+/*# sourceMappingURL=large.css.map */

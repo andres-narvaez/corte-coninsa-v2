@@ -1,0 +1,336 @@
+@media (max-width: 1024px) {
+    .product-page-main-container {
+        .product-page-first-fold {
+            display: block;
+            
+            .pg-first-fold-slider {
+                display: block;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+
+                div:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            .pg-first-card-call-to-action {
+                background-color: @white;
+                border-top: 1px solid @gray-4;
+                margin: 10px 0 0 0;
+
+                &.mobile-buttons {
+                    display: block;
+                }
+
+                h4 {
+                    display: none;
+                }
+
+                .pg-first-cardl-buttons-list {
+
+                    li {
+                    font-size: 0;
+
+                        &::before {
+                            background-color: @green-5;
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+
+                    .pg-first-cardl-button-location {
+                        &::before {
+                            background-image: url("../assets/images/icono-lugar-hover.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-message {
+                        &::before {
+                            background-image: url("../assets/images/icono-mensajes-hover.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-call {
+                        &::before {
+                            background-image: url("../assets/images/icono-llamar-hover.png")
+                        }
+                    }
+                }
+            }
+        }
+
+        .pg-first-fold-proyect-info-card {
+            display: block;
+            width: 100%;
+            background-color: @gray-5;
+            padding-bottom: 15px;
+
+            .pg-first-card-logo {
+                margin: 0 0 0 20px;
+                width: 30%;
+                display: inline-block;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .pg-first-card-proyect-info {
+                display: inline-block;
+                width: 50%;
+                padding-bottom: 0;
+
+                .pg-proyect-info-group-one {
+                    margin: 0;
+                }
+
+                h1 {
+                    font-size: 1.7em;
+                }
+
+                .pg-first-card-project-main-city {
+                    font-size: 1.2em;
+                }
+            }
+
+            .pg-first-card-call-to-action {
+                display: none;
+            }
+
+            .pg-proyect-info-group-two,
+            .card-disclaimer {
+                display: none;
+            }
+        }
+
+        .pg-describe-proyect-specs {
+            .ui-tabs-nav {
+                display: flex;
+                width: 100%;
+                border: none;
+                justify-content: center;
+
+                li {
+                    border: none;
+
+                    a {
+                        font-size: 0;
+                        padding: 0;
+
+                        &::before {
+                            width: 40px;
+                            height: 40px;
+                            background-size: 25px;
+                            background-repeat: no-repeat;
+                            background-position: 8px 7px;
+                        }
+                    }
+
+                    &.ui-tabs-active {
+                        background-color: transparent;
+                        a {
+                            &::before {
+                                background-color: @green-5;
+                                border-radius: 30px;
+                            }
+                        }
+
+                        &::after {
+                            display: none;
+                        }
+
+                        &:focus {
+                            outline-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pg-describe-proyect-specs {
+            .pg-main-container-tabs {
+                position: initial;
+                border-left: none;
+                width: 100%;
+                margin: 20px 0 0 0;
+                padding: 0;
+            }  
+        }
+
+        .product-page-third-fold.big-galery .item-gallery-photo {
+            flex: 1 49%;
+            margin-right: 1%;
+        }
+
+        .product-page-third-fold.big-galery .item-gallery-photo:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .pg-property-types {
+            .pg-propery-header {
+                display: block;
+                width: 100%;
+            }
+
+            .pg-property-types-title {
+                min-height: auto;
+                padding: 0;
+                margin: 10px 0 20px;
+                border-right: none;
+            }
+            
+            .pg-property-types-stage-controlls {
+                max-width: 100%;
+                min-width: auto;
+                margin: 0 0 60px 0;
+            }
+
+            .pg-main-container-tabs {
+                .pg-property-types-controlls {
+                    max-width: 100%;
+                    min-width: auto;
+                    right: 0;
+                    left: 0;
+                    top: 135px;
+                }
+
+                .property-features-content {
+                    .property-first-content {
+                        padding: 0;
+                        order: 2;
+                        flex: 1 100%;
+                        
+                        .property-main-features {
+                            text-align: center;
+
+                            ul {
+                                text-align: center;
+                                li {
+                                    display: inline-block;
+                                    width: 45%;
+                                    padding: 4% 3% 4% 0%;
+                                    background-color: @white;
+                                    border: 1px solid @gray-4;
+                                    position: relative;
+                                    text-align: left;
+
+                                    span {
+                                        font-size: 0.8em;
+                                        margin: 0;
+                                        padding-left: 20%;
+                                    }
+
+                                    &::before {
+                                        position: absolute;
+                                    }
+
+                                    &.download-pdf {
+                                        a {
+                                            padding: 0 0 0 25%;
+                                            font-size: 0.8em;
+                                            display: block;
+                                        }
+
+                                        &::before {
+                                            width: 40px;
+                                            height: 50px;
+                                            top: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .download-pdf {
+                            display: none;
+                        }
+
+                        .buttons-property-actions {
+                            .pg-first-cardl-buttons-list {
+                                li {
+                                    &::before {
+                                        background-color: @green-5;
+                                        width: 60px;
+                                        height: 60px;
+                                    }
+                                }
+
+                                .pg-first-cardl-button-share {
+                                    &::before {
+                                        background-image: url("../assets/images/icono-compartir-hover.png")
+                                    }
+                                }
+
+                                .pg-first-cardl-button-message {
+                                    &::before {
+                                        background-image: url("../assets/images/icono-mensajes-hover.png")
+                                    }
+                                }
+
+                                .pg-first-cardl-button-call {
+                                    &::before {
+                                        background-image: url("../assets/images/icono-llamar-hover.png")
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .property-second-content {
+                        order: 1;
+                        flex: 1 100%;
+
+                        .lSSlideOuter.vertical {
+                            padding-right: 0 !important;
+
+                            .lSGallery {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product-page-fifth-fold {
+        display: block;
+        padding: 20px 10%;
+        width: auto;
+
+        div {
+            flex: 1 100%;
+            padding: 0;
+        }
+
+        .pg-pay-way {
+            border-right: none;
+            border-bottom: 1px solid @blue-5;
+            padding: 0 0 20px 0;
+            margin: 0 0 20px 0;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
+
+        a {
+            color: @green-5;
+            font-weight: bold;
+            font-size: 1.1em;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            color: @gray-1;
+            font-size: 0.7em;
+        }
+    }
+}

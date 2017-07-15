@@ -1,0 +1,15 @@
+@media (max-width: 480px) {
+  html .product-page-main-container .pg-property-types .pg-property-types-title {
+    padding: 0 20px;
+  }
+  html .product-page-main-container .pg-property-types .pg-main-container-tabs .pg-property-types-controlls {
+    top: 175px;
+  }
+  html .product-page-main-container .pg-property-types .pg-main-container-tabs .property-features-content .property-second-content .gallery .item-gallery-photo {
+    height: 320px !important;
+  }
+  html .product-page-main-container .pg-property-types .pg-property-types-stage-controlls {
+    margin: 0 0 50px 0;
+  }
+}
+/*# sourceMappingURL=small.css.map */

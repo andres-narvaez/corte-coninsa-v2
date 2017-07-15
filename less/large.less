@@ -1,0 +1,82 @@
+.pg-first-fold-proyect-info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+}
+
+.pg-first-fold-slider {
+    display: flex;
+    width: 75%;
+    div {
+        flex-direction: row;
+    }
+}
+
+.pg-describe-proyect-specs {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+
+    .ui-tabs-nav {
+        margin: 0 50px 0 0;
+        padding: 0;
+        width: 25%;
+        border: 1px solid @gray-3;
+        height: auto;
+        display: inline-block;
+        vertical-align: top;
+
+        li {
+            border-bottom: 1px solid @gray-3;
+
+            a {
+                padding: 20px;
+                color:  @gray-0;
+                font-size: 1.1em;
+                display: block;
+            }
+
+            &.ui-tabs-active {
+                background: @blue-5;
+                position: relative;
+                border: none;
+
+                a {
+                    color: @gray-5;
+                    
+                    &:focus {
+                        outline-color: transparent;
+                        outline-style: none;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 7.5px 0 7.5px 10px;
+                    border-color: transparent transparent transparent @blue-5;
+                    position: absolute;
+                    right: -10px;
+                    top: 25px;
+                }
+
+                &:focus {
+                    outline-color: transparent;
+                    outline-style: none;
+                }
+            }
+        }
+    }
+
+    .pg-main-container-tabs {
+        border-left: 1px solid @gray-3;
+        display: inline-block;
+        width: 64%;
+        height: 88%;
+        position: absolute;
+    }
+}

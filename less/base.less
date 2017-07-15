@@ -1,0 +1,755 @@
+html,
+body {
+    font-family: roboto;
+    padding: 0;
+    margin: 0;
+}
+
+.pg-full-width-container {
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: @blue-5;
+    font-weight: bold;
+    font-size: 2.7em;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+h4 {
+    color: @blue-5;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+h3 {
+    color: @blue-5;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+p {
+    color: @gray-1;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 5px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.product-page-first-fold {
+    display: flex;
+    margin: 0 0 50px 0;
+
+    .mobile-buttons {
+        display: none;
+    }
+
+    .card-disclaimer {
+        color: @gray-2;
+    }
+
+    .pg-first-card-logo {
+        margin: 10px 0;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .pg-first-card-proyect-info {
+        background-color: @gray-5;
+        padding: 15px;
+        
+        span {
+            display: block;
+        }
+    }
+
+    .pg-first-card-project-main-city {
+        font-size: 1.5em;
+        color: @blue-5;
+        font-weight: bold;
+    }
+
+    .pg-first-card-project-address {
+        font-size: 1em;
+        color: @blue-5;
+    }
+
+    .pg-first-cardl-buttons-list {
+        display: flex;
+        padding: 0;
+
+        li {
+            list-style: none;
+            text-decoration: none;
+            color: @blue-5;
+            font-size: 0.6em;
+            width: 33%;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                border-radius: 50px;
+            }
+
+            a {
+                color: @blue-5;
+            }
+
+            &:hover {
+                font-size: 0;
+                &::before {
+                    background-color: @green-5;
+                    width: 60px;
+                    height: 60px;
+                    -webkit-transition: 270ms ease-in-out;
+                    -moz-transition: 270ms ease-in-out;
+                    -o-transition: 270ms ease-in-out;
+                    transition: 270ms ease-in-out;
+                }
+            }
+        }
+
+        .pg-first-cardl-button-location {
+            &::before {
+                background-image: url("../assets/images/icono-lugar.png")
+            }
+        }
+
+        .pg-first-cardl-button-message {
+            &::before {
+                background-image: url("../assets/images/icono-mensajes.png")
+            }
+        }
+
+        .pg-first-cardl-button-call {
+            position: relative;
+
+            &::before {
+                background-image: url("../assets/images/icono-llamar.png")
+            }
+
+            .pg-contact-info {
+                display: none;
+                width: 100px;
+            }
+
+            &:hover .pg-contact-info {
+                font-size: 10px;
+                display: block;
+                position: absolute;
+                background-color: @green-5;
+                border-radius: 5px;
+                padding: 20px;
+                z-index: 2;
+                width: 200px;
+                color: @white;
+                left: -60px;
+                top: 75px;
+                -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.55);
+                -moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.55);
+                box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.55);
+                -webkit-transition: 670ms ease-in-out;
+                -moz-transition: 670ms ease-in-out;
+                -o-transition: 670ms ease-in-out;
+                transition: 670ms ease-in-out;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 7.5px 12px 7.5px;
+                    border-color: transparent transparent @green-5 transparent;
+                    top: -32px;
+                    left: 90px;
+                    position: relative;
+                }
+
+                span {
+                    display: block;
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+                
+                .pg-contact-city {
+                    text-align: left;
+                }
+
+                .pg-contact-address {
+                    font-weight: normal;
+                    text-align: left;
+                }
+            }
+        }
+
+        .pg-first-cardl-button-location {
+            &:hover::before {
+                background-image: url("../assets/images/icono-lugar-hover.png")
+            }
+        }
+
+        .pg-first-cardl-button-message {
+             &:hover::before {
+                background-image: url("../assets/images/icono-mensajes-hover.png")
+            }
+        }
+
+        .pg-first-cardl-button-call {
+             &:hover::before {
+                background-image: url("../assets/images/icono-llamar-hover.png")
+            }
+        }
+    }
+
+    .pg-proyect-info-group-one {
+        margin: 0 0 10px 0;
+    }
+
+    .pg-proyect-info-group-two {
+        span {
+            color: @green-5;
+        }
+
+        .pg-first-card-project-type {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+
+    .pg-first-card-call-to-action {
+        text-align: center;
+    }
+}
+
+.pg-describe-proyect-specs {
+    .ui-tabs-nav {
+        li {
+            list-style: none;
+
+            &.ui-tabs-active {
+                .description::before {  
+                    background-image: url("../assets/images/icono-descripcion-hover.png");
+                }
+
+                .specs::before {  
+                    background-image: url("../assets/images/icono-caracteristicas-hover.png");
+                }
+
+                .town-planning::before {  
+                    background-image: url("../assets/images/icono-urbanismo-hover.png");
+                }
+
+                .finishes::before {  
+                    background-image: url("../assets/images/icono-acabados-hover.png");
+                }
+
+                .status::before {  
+                    background-image: url("../assets/images/icono-avance-hover.png");
+                }
+            }
+        }
+            
+        a {
+            padding: 0 0 0 30px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 25px;
+                height: 25px;
+                background-size: 100%;
+                float: left;
+                margin-right: 5px; 
+            }
+        }
+
+        .description::before {  
+            background-image: url("../assets/images/icono-descripcion.png");
+        }
+
+        .specs::before {  
+            background-image: url("../assets/images/icono-caracteristicas.png");
+        }
+
+        .town-planning::before {  
+            background-image: url("../assets/images/icono-urbanismo.png");
+        }
+
+        .finishes::before {  
+            background-image: url("../assets/images/icono-acabados.png");
+        }
+
+        .status::before {  
+            background-image: url("../assets/images/icono-avance.png");
+        }
+    }
+
+    .pg-main-container-tabs {
+        padding: 20px 0 20px 50px;
+
+        h2 {
+            color: @blue-5;
+            font-weight: bold;
+            font-size: 2.7em;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: @blue-5;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 1.6em;
+            color: @blue-5;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+}
+
+.product-page-third-fold.big-galery {
+    margin: 50px 0;
+
+    .list-unstyled {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .item-gallery-photo {
+        flex: 1 19.5%;
+        margin-right: 0.5%;
+
+        img {
+            width: 100%;
+        } 
+    }
+
+    .item-gallery-photo:nth-child(5),
+    .item-gallery-photo:nth-child(10),
+    .item-gallery-photo:nth-child(15),
+    .item-gallery-photo:nth-child(20),
+    .item-gallery-photo:nth-child(25),
+    .item-gallery-photo:nth-child(30),
+    .item-gallery-photo:nth-child(35),
+    .item-gallery-photo:nth-child(40),
+    .item-gallery-photo:nth-child(45),
+    .item-gallery-photo:nth-child(50) {
+        margin-right: 0;
+    }
+
+}
+
+.pg-property-types {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    position: relative;
+
+    .pg-propery-header {
+        display: flex;
+        flex: 1;
+    }
+
+    .pg-property-types-title {
+        flex: 1 30%;
+        text-align: center;
+        border-right: 1px solid @gray-3;
+        padding: 26px 2% 0 10%;
+        margin: 0;
+        color: @blue-5;
+        font-weight: bold;
+        font-size: 2em;
+        min-height: 110px;
+    }
+
+    .pg-property-types-stage-controlls {
+        flex: 1 35%;
+        margin: 0 10% 0 5%;
+        padding: 0;
+        max-width: 495px;
+        min-width: 495px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 46px;
+        border-bottom: 2px solid @green-5;
+
+        li {
+            width: 25%;
+            min-width: 175px;
+            text-align: center;
+            background-color: @gray-5;
+            align-items: center;
+            height: 30px;
+            padding: 5px 0 0 0;
+
+            a {
+                color: @blue-5;
+                font-size: 1em;
+            }
+        }
+
+        li.ui-state-active {
+            background-color: @blue-5;
+            height: 36px;
+            padding: 10px 0 0 0;
+
+            a {
+                color: @white;
+                font-weight: bold;
+                display: block;
+                outline-color: transparent;
+            }
+        }
+    }
+
+    .pg-main-container-tabs {
+        flex: 1 100%;
+
+        .pg-property-types-controlls {
+            display: block;
+            max-width: 495px;
+            min-width: 495px;
+            position: absolute;
+            right: 10%;
+            padding: 0;
+            margin: 0;
+            clear: both;
+            top: 55px;
+
+            li {
+                display: inline-block;
+                background-color: @gray-5;
+                border: 1px solid @gray-4;
+                width: 65px;
+                padding: 22px 0;
+                text-align: center;
+
+                a {
+                    display: block;
+                    color: @blue-5;
+                    font-size: 1em;
+                    outline-color: transparent;
+                }
+            }
+
+            li:not(:first-child) {
+                margin-left: -4px;
+            }
+
+            li.ui-tabs-active {
+                background-color: @green-5;
+                border-color: transparent;
+
+                a {
+                    color: @white;
+                    font-weight: bold;
+                    display: block;
+                    outline-color: transparent;
+                }
+            }
+        }
+
+        .property-features-content {
+            display: flex;
+            margin: 50px 0;
+            flex-flow: row wrap;
+
+            .property-first-content {
+                flex: 1 25%;
+                padding-right: 20px;
+
+                .property-main-features {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            color: @blue-4;
+                            padding: 10px 20px;
+                            font-weight: bold;
+                            font-size: 1em;
+                            display: flex;
+                            align-items: center;
+
+                            span:last-child {
+                                font-weight: normal;
+                                color: @gray-1;
+                                margin-left: 20px;
+                                flex: none;
+                            }
+
+                            span {
+                                display: block;
+                                flex-grow: 2;
+                            }
+
+                            &::before {
+                                content: "";
+                                width: 25px;
+                                height: 27px;
+                                margin-right: 5px;
+                                display: block;
+                            }
+
+                            &.download-pdf {
+                                display: none;
+                            }
+                        }
+
+                        li:nth-child(even) {
+                            background-color: @white;
+                        }
+
+                        li:nth-child(odd) {
+                            background-color: @gray-4;
+                        }
+
+                        .property-code {
+                            &::before {
+                                background-image: url(../assets/images/icono-codigo.png);
+                            }
+                        }
+
+                        .price-code {
+                            &::before {
+                                background-image: url(../assets/images/icono-precio.png);
+                            }
+                        }
+
+                        .property-area {
+                            &::before {
+                                background-image: url(../assets/images/icono-area.png);
+                            }
+                        }
+
+                        .property-rooms {
+                            &::before {
+                                background-image: url(../assets/images/icono-alcoba.png);
+                            }
+                        }
+
+                        .property-baths {
+                            &::before {
+                                background-image: url(../assets/images/icono-bath.png);
+                            }
+                        }
+
+                        .property-status {
+                            &::before {
+                                background-image: url(../assets/images/icono-estado.png);
+                            }
+                        }
+
+                        .property-location {
+                            &::before {
+                                background-image: url(../assets/images/icono-ubicacion.png);
+                            }
+                        }
+                    }
+                    
+                }
+
+                .pg-first-cardl-buttons-list {
+                    display: flex;
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        text-decoration: none;
+                        color: @blue-5;
+                        font-size: 0.6em;
+                        width: 33%;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            margin: 0 auto;
+                            border-radius: 50px;
+                        }
+
+                        a {
+                            font-size: 0;
+                        }
+
+                        &:hover {
+                            font-size: 0;
+                            &::before {
+                                background-color: @green-5;
+                                width: 60px;
+                                height: 60px;
+                                -webkit-transition: 270ms ease-in-out;
+                                -moz-transition: 270ms ease-in-out;
+                                -o-transition: 270ms ease-in-out;
+                                transition: 270ms ease-in-out;
+                            }
+                        }
+                    }
+
+                    .pg-first-cardl-button-share {
+                        &::before {
+                            background-image: url("../assets/images/icono-compartir.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-message {
+                        &::before {
+                            background-image: url("../assets/images/icono-mensajes.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-call {
+                        &::before {
+                            background-image: url("../assets/images/icono-llamar.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-share {
+                        &:hover::before {
+                            background-image: url("../assets/images/icono-compartir-hover.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-message {
+                        &:hover::before {
+                            background-image: url("../assets/images/icono-mensajes-hover.png")
+                        }
+                    }
+
+                    .pg-first-cardl-button-call {
+                        &:hover::before {
+                            background-image: url("../assets/images/icono-llamar-hover.png")
+                        }
+                    }
+                }
+
+                .download-pdf {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        height: 55px;
+                        background-image: url("../assets/images/icon-pdf.png");
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        color: @green-5;
+                        font-weight: bold;
+                        padding-top: 15px;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }   
+            }
+
+            .property-second-content {
+                flex: 1 70%;
+
+                .gallery {
+                    .item-gallery-photo.active {
+                        border: 1px solid @gray-4;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .lSPager {
+                    li {
+                        border: 1px solid @gray-4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 98px !important;
+
+                        a {
+                            color: @blue-5;
+                            font-size: 1.2em; 
+                        }
+
+                        &.active {
+                            background-color: @green-5;
+
+                            a {
+                                color: @white;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-page-fifth-fold {
+    background-color: @gray-5;
+    padding: 20px 0;
+    display: flex;
+    margin: 0 0 20px 0;
+
+    div {
+        flex: 1 50%;
+        padding: 0 5%;
+    }
+
+    .pg-pay-way {
+        border-right: 1px solid @blue-5;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    a {
+        color: @green-5;
+        font-weight: bold;
+        font-size: 1.1em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: @gray-1;
+        font-size: 0.7em;
+    }
+}
