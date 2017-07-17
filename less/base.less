@@ -753,3 +753,122 @@ li {
         font-size: 0.7em;
     }
 }
+
+.product-page-contact-form {
+    background-color: @blue-5;
+    padding: 40px 20px;
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 30px 0;
+
+    .pg-contact-tittle {
+        font-size: 2em;
+        font-weight: bold;
+        flex: 1 100%;
+        color: @white;
+        margin: 0 0 20px 0;
+    }
+
+    .pg-contact-info {
+        color: @white;
+        flex: 1 25%;
+        
+        .pg-container-contact-info {
+            display: flex;
+            flex-flow: row wrap;
+
+            .pg-contact-image {
+                flex: 1 20%;
+
+                img {
+                    display: block;
+                    border-radius: 250px;
+                    width: 100%;
+                }
+            }
+
+            .pg-contact-info {
+                flex: 1 70%;
+                padding: 0 0 0 20px;
+
+                h4 {
+                    color: @white;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+            
+        }
+    }
+
+    .pg-contact-form {
+        flex:1 65%;
+        
+        form {
+            display: flex;
+            flex-flow: row wrap;
+
+            .pg-contact-part-one {
+                flex: 1 50%;
+
+                .pg-input-container {
+
+                    input {
+                        border-radius: 5px;
+                        padding: 8px;
+                        border: none;
+                        display: inline-block;
+                        width: 44%;
+                        margin: 0 2% 10px 0;
+                        font-size: 0.8em;
+                    }
+
+                    input:nth-child(2n) {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+
+            .pg-contact-part-two {
+                flex: 1 50%;
+
+                textarea {
+                    width: 94%;
+                    height: 55%;
+                    border-radius: 5px;
+                    padding: 3% 3%;
+                }
+            }
+
+            .pg-contact-part-three {
+                flex: 1 100%;
+                color: @white;
+
+                .g-recaptcha {
+                    display: inline-block;
+                }
+
+                .pg-submit {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 20px 0 0 20px;
+                    background-color: @green-5;
+                    color: @white;
+                    border-radius: 8px;
+                    padding: 10px 20px;;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 1.3em;
+                    cursor: pointer;
+                }
+
+                input[type="checkbox"] {
+                    margin: 0 5px 20px 0;
+                }
+            }
+        }
+    }
+}

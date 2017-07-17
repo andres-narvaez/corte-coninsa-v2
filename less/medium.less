@@ -55,8 +55,17 @@
                     }
 
                     .pg-first-cardl-button-call {
+                        position: relative;
+
                         &::before {
                             background-image: url("../assets/images/icono-llamar-hover.png")
+                        }
+
+                        a {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
                         }
                     }
                 }
@@ -114,9 +123,13 @@
                 width: 100%;
                 border: none;
                 justify-content: center;
+                border-bottom: 1px solid @green-5;
+                padding: 0 0 6px 0;
+                position: relative;
 
                 li {
                     border: none;
+                    position: relative;
 
                     a {
                         font-size: 0;
@@ -133,6 +146,7 @@
 
                     &.ui-tabs-active {
                         background-color: transparent;
+
                         a {
                             &::before {
                                 background-color: @green-5;
@@ -140,8 +154,31 @@
                             }
                         }
 
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 5px 6px 4px;
+                            border-color: transparent transparent @white transparent;
+                            position: absolute;
+                            z-index: 2;
+                            left: 18px;
+                            top: 42px;
+                        }
+
                         &::after {
-                            display: none;
+                            content: "";
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 6px 7px 6px;
+                            border-color: transparent transparent @green-5 transparent;
+                            position: absolute;
+                            left: 16px;
+                            top: 40px;
                         }
 
                         &:focus {
@@ -273,8 +310,17 @@
                                 }
 
                                 .pg-first-cardl-button-call {
+                                    position: relative;
+
                                     &::before {
                                         background-image: url("../assets/images/icono-llamar-hover.png")
+                                    }
+
+                                    a {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
                                     }
                                 }
                             }
@@ -331,6 +377,71 @@
         p {
             color: @gray-1;
             font-size: 0.7em;
+        }
+    }
+    
+    .product-page-contact-form {
+        background-color: @white;
+
+        .pg-contact-tittle {
+            color: @blue-5;
+            font-size: 1.4em;
+        }
+
+        .pg-contact-info {
+            color: @blue-5;
+            margin: 0 0 20px 0;
+
+            .pg-contact-image img {
+                border: 1px solid @gray-4;
+            }
+
+            h4 {
+                color: @blue-5 !important;
+            }
+
+            span {
+                display: @blue-5;
+            }
+        }
+
+        .pg-contact-form {
+            form {
+                .pg-contact-part-one {
+                    flex: 1 100%;
+                    text-align: center;
+
+                    .pg-input-container {
+                        input {
+                            border: 1px solid @gray-4;
+                            width: 40%;
+                        }
+                    }
+                }
+
+                .pg-contact-part-two {
+                    flex: 1 100%;
+                    text-align: center;
+                    height: 150px;
+
+                    textarea {
+                        width: 87%;
+                        height: 80%;
+                        border: 1px solid @gray-4;
+                        font-family: roboto;
+                        color: @gray-4;
+                    }
+                }
+
+                .pg-contact-part-three {
+                    color: @blue-5;
+                    text-align: center;
+
+                    .pg-submit {
+                        margin: 20px 0 0 0;
+                    }
+                }
+            }
         }
     }
 }
